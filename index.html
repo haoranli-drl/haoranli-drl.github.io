@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haoran Li - 李浩然</title>
+    <title>Haoran Li</title>
     <style>
         * {
             margin: 0;
@@ -15,162 +15,86 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
+            background: white;
         }
 
-        header {
+        .nav {
             text-align: center;
-            padding: 60px 0;
-            border-bottom: 2px solid #e0e0e0;
-            margin-bottom: 40px;
+            margin: 40px 0;
         }
 
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 4px solid #4CAF50;
+        .nav a {
+            color: #0066cc;
+            text-decoration: none;
+            margin: 0 15px;
         }
 
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #2c3e50;
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            margin: 60px 0;
         }
 
         .title {
-            font-size: 1.3em;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .links {
-            margin: 30px 0;
-        }
-
-        .links a {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 5px;
-            background: #2196F3;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .links a:hover {
-            background: #0d47a1;
-        }
-
-        section {
-            margin-bottom: 50px;
-        }
-
-        h2 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            color: #2c3e50;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
-        }
-
-        h3 {
-            font-size: 1.3em;
-            margin: 15px 0 10px 0;
-            color: #444;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .info-item {
-            background: #f5f5f5;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #4CAF50;
-        }
-
-        .info-item strong {
-            color: #2c3e50;
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-            margin: 20px 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background: #4CAF50;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -8px;
-            top: 5px;
-            width: 14px;
-            height: 14px;
-            background: #4CAF50;
-            border-radius: 50%;
-        }
-
-        .publication {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            transition: box-shadow 0.3s;
-        }
-
-        .publication:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .publication-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-
-        .publication-authors {
-            color: #666;
-            font-style: italic;
+            font-size: 2.5em;
             margin-bottom: 5px;
         }
 
-        .publication-venue {
-            color: #4CAF50;
-            font-weight: bold;
-            margin-bottom: 10px;
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .affiliation {
+            margin: 30px 0;
+            line-height: 1.8;
+        }
+
+        .affiliation a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .affiliation a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin: 50px 0;
+        }
+
+        h2 {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .publication-item {
+            margin: 30px 0;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .publication-item:last-child {
+            border-bottom: none;
+        }
+
+        .publication-title {
+            font-size: 1.1em;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+
+        .publication-meta {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 8px;
         }
 
         .publication-links {
@@ -178,295 +102,140 @@
         }
 
         .publication-links a {
-            display: inline-block;
-            padding: 5px 12px;
-            margin-right: 5px;
-            background: #e9ecef;
-            color: #495057;
+            color: #0066cc;
             text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.9em;
+            margin-right: 15px;
         }
 
         .publication-links a:hover {
-            background: #dbe4ff;
+            text-decoration: underline;
         }
 
-        .award {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 15px;
+        .talk-item {
+            margin: 20px 0;
         }
 
-        .award-title {
-            font-weight: bold;
-            font-size: 1.1em;
+        .talk-item ul {
+            list-style: none;
+            padding-left: 20px;
         }
 
-        .award-year {
-            font-size: 0.9em;
-            opacity: 0.9;
+        .talk-item li {
+            margin: 10px 0;
         }
 
         footer {
-            text-align: center;
-            padding: 40px 0;
-            margin-top: 60px;
-            border-top: 2px solid #e0e0e0;
-            color: #777;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 20px 10px;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
+            margin: 80px 0 40px;
+            color: #999;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <header>
-        <!-- 个人照片 - 需要用户提供 -->
-        <!-- <img src="images/profile.jpg" alt="Haoran Li" class="profile-img"> -->
-        <div class="profile-placeholder">
-            <svg width="200" height="200" viewBox="0 0 200 200">
-                <circle cx="100" cy="70" r="40" fill="#4CAF50"/>
-                <path d="M20 180 Q100 140 180 180" fill="#4CAF50"/>
-                <text x="100" y="80" text-anchor="middle" fill="white" font-size="24">李</text>
-            </svg>
-        </div>
-        <h1>Haoran Li / 李浩然</h1>
-        <p class="title">Associate Professor / 副高级研究员</p>
-        <p>多模态人工智能系统重点实验室<br>
-        中国科学院自动化研究所<br>
-        北京，中国</p>
+    <div class="nav">
+        <a href="https://scholar.google.com/citations?hl=zh-CN&user=kalE5UIAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+        <a href="https://github.com/haoranli-drl">GitHub</a>
+        <a href="mailto:lihaoran2015@ia.ac.cn">Email</a>
+    </div>
 
-        <div class="links">
-            <a href="mailto:lihaoran2015@ia.ac.cn">Email</a>
-            <a href="https://scholar.google.com/citations?hl=zh-CN&user=kalE5UIAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
-            <a href="https://github.com/haoranli-drl">GitHub</a>
+    <div class="header">
+        <h1 class="title">Haoran Li</h1>
+        <p class="subtitle">Associate Professor / 副高级研究员</p>
+
+        <div class="affiliation">
+            <p>Department of Research in Robotics and Intelligent Systems<br>
+            <a href="http://www.ia.cas.cn/">Institute of Automation, Chinese Academy of Sciences</a></p>
+            <p>Beijing, China</p>
         </div>
-    </header>
+    </div>
 
     <section>
-        <h2>About Me / 关于我</h2>
-        <p>我是中国科学院自动化研究所的副高级研究员，主要从事机器人领域的通用策略模型研究。我的研究重点包括深度强化学习（离线强化学习、在线强化学习以及离线到在线强化学习）、Sim2Real算法、机器人系统等。</p>
-
-        <p>我的目标是开发能够在复杂动态环境中自主学习和适应的智能机器人系统，推动机器人技术从实验室演示走向实际应用。</p>
+        <h2>About</h2>
+        <p>I am an Associate Professor at the Institute of Automation, Chinese Academy of Sciences. My research focuses on generalist policy models for robotics, including deep reinforcement learning (offline RL, online RL, and offline-to-online learning), Sim2Real algorithms, and robotics systems.</p>
+        <p>My goal is to develop intelligent robotic systems capable of autonomous learning and adaptation in complex dynamic environments, advancing robotics technology from laboratory demonstrations to real-world applications.</p>
     </section>
 
     <section>
-        <h2>Research Interests / 研究方向</h2>
-        <div class="info-grid">
-            <div class="info-item">
-                <strong>通用策略模型</strong><br>
-                Generalist Policy Models
-            </div>
-            <div class="info-item">
-                <strong>深度强化学习</strong><br>
-                Deep Reinforcement Learning
-            </div>
-            <div class="info-item">
-                <strong>离线到在线学习</strong><br>
-                Offline-to-Online Learning
-            </div>
-            <div class="info-item">
-                <strong>Sim2Real</strong><br>
-                仿真到真实迁移
-            </div>
-            <div class="info-item">
-                <strong>机器人导航</strong><br>
-                Robot Navigation
-            </div>
-            <div class="info-item">
-                <strong>多智能体系统</strong><br>
-                Multi-Agent Systems
-            </div>
-        </div>
-    </section>
+        <h2>Publications</h2>
 
-    <section>
-        <h2>Education / 教育背景</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <strong>2015.09 - 2020.08</strong><br>
-                中国科学院自动化研究所<br>
-                <em>博士 (Ph.D.)</em>
-            </div>
-            <div class="timeline-item">
-                <strong>2011.09 - 2015.07</strong><br>
-                中南大学<br>
-                <em>硕士 (M.S.)</em>
-            </div>
-            <div class="timeline-item">
-                <strong>2007.09 - 2011.07</strong><br>
-                中南大学<br>
-                <em>学士 (B.S.)</em>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Work Experience / 工作经历</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <strong>2022.05 - 至今</strong><br>
-                中国科学院自动化研究所<br>
-                <em>副高级研究员 (Associate Professor)</em>
-            </div>
-            <div class="timeline-item">
-                <strong>2020.10 - 2022.04</strong><br>
-                中国科学院自动化研究所<br>
-                <em>助理研究员 (Assistant Professor)</em>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Selected Publications / 代表论文 (2020+)</h2>
-
-        <div class="publication">
+        <div class="publication-item">
             <div class="publication-title">面向具身操作的视觉-语言-动作模型综述</div>
-            <div class="publication-authors">李浩然, 陈宇辉, 崔文博, 刘卫恒, 刘锴, 周明才, 张正涛, 赵冬斌</div>
-            <div class="publication-venue">自动化学报 (Acta Automatica Sinica), 2026</div>
+            <div class="publication-meta">
+                Li Hao-Ran, Chen Yu-Hui, Cui Wen-Bo, Liu Wei-Heng, Liu Kai, Zhou Ming-Cai, Zhang Zheng-Tao, Zhao Dong-Bin.<br>
+                <strong>自动化学报 (Acta Automatica Sinica)</strong>, 2026
+            </div>
             <div class="publication-links">
                 <a href="https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c250394">Paper</a>
                 <a href="https://doi.org/10.16383/j.aas.c250394">DOI</a>
             </div>
         </div>
 
-        <div class="publication">
+        <div class="publication-item">
             <div class="publication-title">Boosting Continuous Control with Consistency Policy</div>
-            <div class="publication-authors">Yuhui Chen, <strong>Haoran Li</strong>, Dongbin Zhao</div>
-            <div class="publication-venue">AAMAS 2024</div>
+            <div class="publication-meta">
+                Yuhui Chen, <strong>Haoran Li</strong>, Dongbin Zhao<br>
+                <strong>AAMAS 2024</strong>
+            </div>
             <div class="publication-links">
                 <a href="#">Paper</a>
-                <a href="#">Code</a>
             </div>
         </div>
 
-        <div class="publication">
+        <div class="publication-item">
             <div class="publication-title">BiFNet: Bidirectional Fusion Network for Road Segmentation</div>
-            <div class="publication-authors"><strong>Haoran Li</strong>, Yaran Chen, Qichao Zhang, Dongbin Zhao</div>
-            <div class="publication-venue">IEEE Transactions on Cybernetics, 2022</div>
+            <div class="publication-meta">
+                <strong>Haoran Li</strong>, Yaran Chen, Qichao Zhang, Dongbin Zhao<br>
+                <strong>IEEE Transactions on Cybernetics</strong>, 2022
+            </div>
             <div class="publication-links">
                 <a href="#">Paper</a>
                 <a href="#">DOI</a>
             </div>
         </div>
 
-        <div class="publication">
+        <div class="publication-item">
             <div class="publication-title">Deep Reinforcement Learning-based Automatic Exploration for Navigation in Unknown Environment</div>
-            <div class="publication-authors"><strong>Haoran Li</strong>, Qichao Zhang, Dongbin Zhao</div>
-            <div class="publication-venue">IEEE Transactions on Neural Networks and Learning Systems, 2020</div>
+            <div class="publication-meta">
+                <strong>Haoran Li</strong>, Qichao Zhang, Dongbin Zhao<br>
+                <strong>IEEE Transactions on Neural Networks and Learning Systems</strong>, 2020
+            </div>
             <div class="publication-links">
                 <a href="#">Paper</a>
                 <a href="#">DOI</a>
             </div>
         </div>
-
-        <p><a href="https://scholar.google.com/citations?hl=zh-CN&user=kalE5UIAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">查看更多论文 →</a></p>
     </section>
 
     <section>
-        <h2>Awards & Honors / 获奖及荣誉</h2>
-
-        <div class="award">
-            <div class="award-title">DJI RoboMaster 人工智能挑战赛学术激励奖</div>
-            <div class="award-year">2020 (排名第一)</div>
-        </div>
-
-        <div class="award">
-            <div class="award-title">ICRA RoboMaster AI Challenge - 感知、导航与路径规划三项赛道冠军</div>
-            <div class="award-year">2020 (排名第二)</div>
-        </div>
-
-        <div class="award">
-            <div class="award-title">"国科大杯"创新创业大赛新一代信息技术分项赛决策一等奖</div>
-            <div class="award-year">2020 (排名第一)</div>
-        </div>
-
-        <div class="award">
-            <div class="award-title">中国AI+创新创业大赛一等奖</div>
-            <div class="award-year">2020 (排名第一)</div>
-        </div>
-
-        <div class="award">
-            <div class="award-title">中国国际"互联网+"创新创业大赛北京赛区二等奖</div>
-            <div class="award-year">2020 (排名第一)</div>
-        </div>
-
-        <div class="award">
-            <div class="award-title">中国智能车未来挑战赛前方车辆距离监测第一名</div>
-            <div class="award-year">2017 (排名第四)</div>
-        </div>
-
-        <div class="award">
-            <div class="award-title">中国智能车未来挑战赛前方车辆检测第一名</div>
-            <div class="award-year">2017 (排名第四)</div>
+        <h2>Education</h2>
+        <div class="talk-item">
+            <ul>
+                <li><strong>2022.05 - Present</strong>: Associate Professor, Institute of Automation, CAS</li>
+                <li><strong>2020.10 - 2022.04</strong>: Assistant Professor, Institute of Automation, CAS</li>
+                <li><strong>2015.09 - 2020.08</strong>: Ph.D., Institute of Automation, CAS</li>
+                <li><strong>2011.09 - 2015.07</strong>: M.S., Central South University</li>
+            </ul>
         </div>
     </section>
 
     <section>
-        <h2>Research Projects / 科研项目</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <strong>2022.01 - 2024.12</strong><br>
-                复杂动态环境下基于深度强化学习的机器人导航策略<br>
-                <em>主持, 国家任务</em>
-            </div>
-            <div class="timeline-item">
-                <strong>2023.01 - 2027.12</strong><br>
-                多智能体对抗博弈仿真及实体验证<br>
-                <em>主持, 国家任务</em>
-            </div>
-            <div class="timeline-item">
-                <strong>2022.01 - 2025.12</strong><br>
-                数据驱动的仿真交通场景生成方法<br>
-                <em>参与, 国家任务</em>
-            </div>
-        </div>
+        <h2>Research Interests</h2>
+        <p>Generalist Policy Models, Deep Reinforcement Learning, Offline-to-Online Learning, Sim2Real, Robot Navigation, Multi-Agent Systems</p>
     </section>
 
     <section>
-        <h2>Patent / 专利</h2>
-        <div class="publication">
-            <div class="publication-title">面向地铁视觉图像的轨道检测方法及系统</div>
-            <div class="publication-authors">第一作者</div>
-            <div class="publication-venue">发明专利, 2023</div>
-            <div class="publication-venue">专利号: CN111611956B</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Contact / 联系方式</h2>
-        <div class="info-grid">
-            <div class="info-item">
-                <strong>邮箱:</strong> lihaoran2015@ia.ac.cn
-            </div>
-            <div class="info-item">
-                <strong>地址:</strong> 北京市海淀区中关村东路95号<br>
-                中国科学院自动化研究所
-            </div>
-            <div class="info-item">
-                <strong>邮编:</strong> 100190
-            </div>
-            <div class="info-item">
-                <strong>实验室:</strong> 多模态人工智能系统重点实验室
-            </div>
+        <h2>Service</h2>
+        <div class="talk-item">
+            <ul>
+                <li>Reviewer for ICRA, IROS, RSS, CoRL</li>
+                <li>Member of Chinese Association for Artificial Intelligence (CAAI)</li>
+            </ul>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Haoran Li. All rights reserved.</p>
-        <p>Powered by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+        <p>Email: lihaoran2015 [at] ia [dot] ac [dot] cn</p>
+        <p>Office: Room 805, 95 Zhongguancun East Road, Haidian District, Beijing 100190</p>
     </footer>
 </body>
 </html>
