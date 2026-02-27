@@ -15,7 +15,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 40px 20px;
             background: white;
@@ -36,92 +36,122 @@
             text-decoration: underline;
         }
 
-        .header {
+        .profile {
+            display: flex;
             margin: 60px 0;
+            align-items: flex-start;
         }
 
-        .title {
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            margin-right: 40px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-name {
             font-size: 2.5em;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
-        .subtitle {
+        .profile-title {
             color: #666;
             font-size: 1.2em;
             margin-bottom: 20px;
         }
 
-        .affiliation {
-            margin: 30px 0;
+        .profile-affiliation {
+            margin: 20px 0;
             line-height: 1.8;
         }
 
-        .affiliation a {
+        .profile-affiliation a {
             color: #0066cc;
             text-decoration: none;
         }
 
-        .affiliation a:hover {
+        .profile-affiliation a:hover {
             text-decoration: underline;
         }
 
         section {
-            margin: 50px 0;
+            margin: 60px 0;
         }
 
         h2 {
-            font-size: 1.3em;
-            margin-bottom: 20px;
+            font-size: 1.5em;
+            margin-bottom: 30px;
             color: #333;
         }
 
-        .publication-item {
-            margin: 30px 0;
-            padding-bottom: 30px;
+        .publication {
+            display: flex;
+            margin: 40px 0;
+            padding-bottom: 40px;
             border-bottom: 1px solid #eee;
         }
 
-        .publication-item:last-child {
+        .publication:last-child {
             border-bottom: none;
+        }
+
+        .publication-img {
+            width: 180px;
+            height: 120px;
+            margin-right: 30px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .publication-info {
+            flex: 1;
         }
 
         .publication-title {
             font-size: 1.1em;
             font-weight: normal;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
-        .publication-meta {
+        .publication-authors {
             color: #666;
             font-size: 0.95em;
             margin-bottom: 8px;
         }
 
+        .publication-venue {
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
         .publication-links {
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         .publication-links a {
             color: #0066cc;
             text-decoration: none;
-            margin-right: 15px;
+            margin-right: 20px;
         }
 
         .publication-links a:hover {
             text-decoration: underline;
-        }
-
-        .talk-item {
-            margin: 20px 0;
-        }
-
-        .talk-item ul {
-            list-style: none;
-            padding-left: 20px;
-        }
-
-        .talk-item li {
-            margin: 10px 0;
         }
 
         footer {
@@ -138,104 +168,152 @@
         <a href="mailto:lihaoran2015@ia.ac.cn">Email</a>
     </div>
 
-    <div class="header">
-        <h1 class="title">Haoran Li</h1>
-        <p class="subtitle">Associate Professor / 副高级研究员</p>
-
-        <div class="affiliation">
-            <p>Department of Research in Robotics and Intelligent Systems<br>
-            <a href="http://www.ia.cas.cn/">Institute of Automation, Chinese Academy of Sciences</a></p>
-            <p>Beijing, China</p>
+    <div class="profile">
+        <div class="profile-img">
+            [Profile Photo]
+        </div>
+        <div class="profile-info">
+            <h1 class="profile-name">Haoran Li</h1>
+            <p class="profile-title">Associate Professor / 副高级研究员</p>
+            <div class="profile-affiliation">
+                <p>Institute of Automation, Chinese Academy of Sciences<br>
+                Beijing, China</p>
+                <p>Email: lihaoran2015@ia.ac.cn</p>
+                <p>Office: Room 805, 95 Zhongguancun East Road, Haidian District, Beijing 100190</p>
+            </div>
         </div>
     </div>
 
     <section>
-        <h2>About</h2>
-        <p>I am an Associate Professor at the Institute of Automation, Chinese Academy of Sciences. My research focuses on generalist policy models for robotics, including deep reinforcement learning (offline RL, online RL, and offline-to-online learning), Sim2Real algorithms, and robotics systems.</p>
-        <p>My goal is to develop intelligent robotic systems capable of autonomous learning and adaptation in complex dynamic environments, advancing robotics technology from laboratory demonstrations to real-world applications.</p>
-    </section>
-
-    <section>
         <h2>Publications</h2>
 
-        <div class="publication-item">
-            <div class="publication-title">面向具身操作的视觉-语言-动作模型综述</div>
-            <div class="publication-meta">
-                Li Hao-Ran, Chen Yu-Hui, Cui Wen-Bo, Liu Wei-Heng, Liu Kai, Zhou Ming-Cai, Zhang Zheng-Tao, Zhao Dong-Bin.<br>
-                <strong>自动化学报 (Acta Automatica Sinica)</strong>, 2026
+        <div class="publication">
+            <div class="publication-img">
+                [Paper Image]
             </div>
-            <div class="publication-links">
-                <a href="https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c250394">Paper</a>
-                <a href="https://doi.org/10.16383/j.aas.c250394">DOI</a>
-            </div>
-        </div>
-
-        <div class="publication-item">
-            <div class="publication-title">Boosting Continuous Control with Consistency Policy</div>
-            <div class="publication-meta">
-                Yuhui Chen, <strong>Haoran Li</strong>, Dongbin Zhao<br>
-                <strong>AAMAS 2024</strong>
-            </div>
-            <div class="publication-links">
-                <a href="#">Paper</a>
+            <div class="publication-info">
+                <div class="publication-title">面向具身操作的视觉-语言-动作模型综述</div>
+                <div class="publication-authors">李浩然, 陈宇辉, 崔文博, 刘卫恒, 刘锴, 周明才, 张正涛, 赵冬斌</div>
+                <div class="publication-venue">自动化学报 (Acta Automatica Sinica), 2026</div>
+                <div class="publication-links">
+                    <a href="https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c250394">Paper</a>
+                    <a href="https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c250394">Webpage</a>
+                </div>
             </div>
         </div>
 
-        <div class="publication-item">
-            <div class="publication-title">BiFNet: Bidirectional Fusion Network for Road Segmentation</div>
-            <div class="publication-meta">
-                <strong>Haoran Li</strong>, Yaran Chen, Qichao Zhang, Dongbin Zhao<br>
-                <strong>IEEE Transactions on Cybernetics</strong>, 2022
+        <div class="publication">
+            <div class="publication-img">
+                [Paper Image]
             </div>
-            <div class="publication-links">
-                <a href="#">Paper</a>
-                <a href="#">DOI</a>
+            <div class="publication-info">
+                <div class="publication-title">Boosting Continuous Control with Consistency Policy</div>
+                <div class="publication-authors">Yuhui Chen, Haoran Li, Dongbin Zhao</div>
+                <div class="publication-venue">AAMAS 2024</div>
+                <div class="publication-links">
+                    <a href="#">Paper</a>
+                    <a href="#">Webpage</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication-img">
+                [Paper Image]
+            </div>
+            <div class="publication-info">
+                <div class="publication-title">BiFNet: Bidirectional Fusion Network for Road Segmentation</div>
+                <div class="publication-authors">Haoran Li, Yaran Chen, Qichao Zhang, Dongbin Zhao</div>
+                <div class="publication-venue">IEEE Transactions on Cybernetics, 2022</div>
+                <div class="publication-links">
+                    <a href="#">Paper</a>
+                    <a href="#">Webpage</a>
+                </div>
             </div>
         </div>
 
-        <div class="publication-item">
-            <div class="publication-title">Deep Reinforcement Learning-based Automatic Exploration for Navigation in Unknown Environment</div>
-            <div class="publication-meta">
-                <strong>Haoran Li</strong>, Qichao Zhang, Dongbin Zhao<br>
-                <strong>IEEE Transactions on Neural Networks and Learning Systems</strong>, 2020
+        <div class="publication">
+            <div class="publication-img">
+                [Paper Image]
             </div>
-            <div class="publication-links">
-                <a href="#">Paper</a>
-                <a href="#">DOI</a>
+            <div class="publication-info">
+                <div class="publication-title">Deep Reinforcement Learning-based Automatic Exploration for Navigation in Unknown Environment</div>
+                <div class="publication-authors">Haoran Li, Qichao Zhang, Dongbin Zhao</div>
+                <div class="publication-venue">IEEE Transactions on Neural Networks and Learning Systems, 2020</div>
+                <div class="publication-links">
+                    <a href="#">Paper</a>
+                    <a href="#">Webpage</a>
+                </div>
             </div>
         </div>
-    </section>
 
-    <section>
-        <h2>Education</h2>
-        <div class="talk-item">
-            <ul>
-                <li><strong>2022.05 - Present</strong>: Associate Professor, Institute of Automation, CAS</li>
-                <li><strong>2020.10 - 2022.04</strong>: Assistant Professor, Institute of Automation, CAS</li>
-                <li><strong>2015.09 - 2020.08</strong>: Ph.D., Institute of Automation, CAS</li>
-                <li><strong>2011.09 - 2015.07</strong>: M.S., Central South University</li>
-            </ul>
+        <div class="publication">
+            <div class="publication-img">
+                [Paper Image]
+            </div>
+            <div class="publication-info">
+                <div class="publication-title">CoPE: Clipped RoPE as A Scalable Free Lunch for Long Context LLMs</div>
+                <div class="publication-authors">Haoran Li, Sucheng Ren, Alan Yuille, Feng Wang</div>
+                <div class="publication-venue">arXiv, 2026</div>
+                <div class="publication-links">
+                    <a href="#">Paper</a>
+                    <a href="#">Webpage</a>
+                    <a href="#">Code</a>
+                </div>
+            </div>
         </div>
-    </section>
 
-    <section>
-        <h2>Research Interests</h2>
-        <p>Generalist Policy Models, Deep Reinforcement Learning, Offline-to-Online Learning, Sim2Real, Robot Navigation, Multi-Agent Systems</p>
-    </section>
+        <div class="publication">
+            <div class="publication-img">
+                [Paper Image]
+            </div>
+            <div class="publication-info">
+                <div class="publication-title">Bi-touch: Bimanual tactile manipulation with sim-to-real deep reinforcement learning</div>
+                <div class="publication-authors">Y Lin, A Church, M Yang, H Li, J Lloyd, D Zhang, NF Lepora</div>
+                <div class="publication-venue">IEEE Robotics and Automation Letters, 2023</div>
+                <div class="publication-links">
+                    <a href="#">Paper</a>
+                    <a href="#">Webpage</a>
+                    <a href="#">Code</a>
+                </div>
+            </div>
+        </div>
 
-    <section>
-        <h2>Service</h2>
-        <div class="talk-item">
-            <ul>
-                <li>Reviewer for ICRA, IROS, RSS, CoRL</li>
-                <li>Member of Chinese Association for Artificial Intelligence (CAAI)</li>
-            </ul>
+        <div class="publication">
+            <div class="publication-img">
+                [Paper Image]
+            </div>
+            <div class="publication-info">
+                <div class="publication-title">BRL/Pisa/IIT SoftHand: a low-cost, 3D-printed, underactuated, tendon-driven hand with soft and adaptive synergies</div>
+                <div class="publication-authors">H Li, CJ Ford, M Bianchi, MG Catalano, E Psomopoulou, NF Lepora</div>
+                <div class="publication-venue">IEEE Robotics and Automation Letters, 2022</div>
+                <div class="publication-links">
+                    <a href="#">Paper</a>
+                    <a href="#">Webpage</a>
+                    <a href="#">Code</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication-img">
+                [Paper Image]
+            </div>
+            <div class="publication-info">
+                <div class="publication-title">Anyrotate: Gravity-invariant in-hand object rotation with sim-to-real touch</div>
+                <div class="publication-authors">M Yang, C Lu, A Church, Y Lin, C Ford, H Li, E Psomopoulou, ...</div>
+                <div class="publication-venue">arXiv, 2024</div>
+                <div class="publication-links">
+                    <a href="#">Paper</a>
+                    <a href="#">Webpage</a>
+                    <a href="#">Code</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>Email: lihaoran2015 [at] ia [dot] ac [dot] cn</p>
-        <p>Office: Room 805, 95 Zhongguancun East Road, Haidian District, Beijing 100190</p>
+        <p>© 2026 Haoran Li. All rights reserved.</p>
     </footer>
 </body>
 </html>
